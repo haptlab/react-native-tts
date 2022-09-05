@@ -31,6 +31,7 @@ RCT_EXPORT_MODULE()
     if (self) {
         _synthesizer = [AVSpeechSynthesizer new];
         _synthesizer.delegate = self;
+        _synthesizer.mixToTelephonyUplink = true;
         _ducking = false;
         _ignoreSilentSwitch = @"inherit"; // inherit, ignore, obey
     }
